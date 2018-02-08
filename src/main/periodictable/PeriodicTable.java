@@ -1,7 +1,7 @@
 package main.periodictable;
 
 public class PeriodicTable {
-    public final static Element hydrogen = Element.HYDROGEN;
+   /* public final static Element hydrogen = Element.HYDROGEN;
     public final static Element helium = Element.HELIUM;
     public final static Element lithium = Element.LITHIUM;
     public final static Element beryllium = Element.BERYLLIUM;
@@ -11,7 +11,7 @@ public class PeriodicTable {
     public final static Element oxygen = Element.OXYGEN;
     public final static Element fluorine = Element.FLUORINE;
     public final static Element neon = Element.NEON;
-
+*/
     public static String getElementInfo(Element element) {
         return String.format("Element name: %s%n" +
                 "Element symbol: %s%n" +
