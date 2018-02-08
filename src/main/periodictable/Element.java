@@ -58,4 +58,14 @@ public enum Element {
         return getMassNum() - getNumOfProtons();
     }
 
+    public int getNumOfValenceElectrons () {
+        // TODO : Finish this method
+        
+
+
+
+        return 0;
+    }
+
+
 }
