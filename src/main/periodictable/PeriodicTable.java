@@ -12,7 +12,6 @@ public class PeriodicTable {
     public final static Element fluorine = Element.FLUORINE;
     public final static Element neon = Element.NEON;
 
-
     public static String getElementInfo(Element element) {
         return String.format("Element name: %s%n" +
                 "Element symbol: %s%n" +
