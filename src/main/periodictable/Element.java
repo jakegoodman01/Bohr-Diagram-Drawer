@@ -1,5 +1,8 @@
 package main.periodictable;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public enum Element {
     HYDROGEN ("H", 1, 1.0079),
     HELIUM ("He", 2, 4.0026),
@@ -58,12 +61,16 @@ public enum Element {
         return getMassNum() - getNumOfProtons();
     }
 
+    public Map<Integer, Integer> getElectronDistribution() {
+        // TODO : Finish this method
+        Map<Integer, Integer> electronDistribution = new HashMap<>();
+
+        return electronDistribution;
+    }
+
     public int getNumOfValenceElectrons () {
         // TODO : Finish this method
-        
-
-
-
+        int numOfElectrons = getNumOfProtons();
         return 0;
     }
 
