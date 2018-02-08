@@ -13,8 +13,8 @@ public class PeriodicTable {
     public final static Element neon = Element.NEON;
 
 
-    public static void getElement(Element element) {
-        System.out.printf("Element name: %s%n" +
+    public static String getElementInfo(Element element) {
+        return String.format("Element name: %s%n" +
                 "Element symbol: %s%n" +
                 "Atomic number: %s%n" +
                 "Atomic mass: %s%n" +
