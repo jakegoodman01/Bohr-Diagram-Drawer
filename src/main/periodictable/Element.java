@@ -10,7 +10,15 @@ public enum Element {
     NITROGEN ("N", 7, 14.0067),
     OXYGEN ("O", 8, 15.9994),
     FLUORINE ("F", 9, 18.9984),
-    NEON ("Ne", 10, 20.1797);
+    NEON ("Ne", 10, 20.1797),
+    SODIUM ("Na", 11, 22.9897),
+    MAGNESIUM ("Mg", 12, 24.305),
+    ALUMINUM ("Al", 13, 26.9815),
+    SILICON ("Si", 14, 28.0855),
+    PHOSPHOROUS ("P", 15, 30.9738),
+    SULFUR ("S", 16, 32.065),
+    CHLORINE ("Cl", 17, 35.453),
+    ARGON ("Ar", 18, 39.948);
 
     private String symbol;
     private int atomicNum;
