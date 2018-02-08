@@ -63,8 +63,30 @@ public enum Element {
 
     public Map<Integer, Integer> getElectronDistribution() {
         // TODO : Finish this method
+        int numOfElectrons = getNumOfProtons();
         Map<Integer, Integer> electronDistribution = new HashMap<>();
 
+        // Filling up the first orbit
+        if (atomicNum == 1) {
+            electronDistribution.put(1, 1);
+            numOfElectrons--;
+        } else {
+            electronDistribution.put(1, 2);
+            numOfElectrons -= 2;
+        }
+
+        // Filling up the other orbits
+        int currentOrbit = 2;
+        while (numOfElectrons > 0) {
+            if (numOfElectrons <= 8) {
+                electronDistribution.put(currentOrbit, numOfElectrons);
+                numOfElectrons = 0;
+            } else {
+                electronDistribution.put(currentOrbit, 8);
+                numOfElectrons -= 8;
+            }
+            currentOrbit++;
+        }
         return electronDistribution;
     }
 

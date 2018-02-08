@@ -1,5 +1,7 @@
 package main.periodictable;
 
+import java.util.Map;
+
 public class PeriodicTable {
    /* public final static Element hydrogen = Element.HYDROGEN;
     public final static Element helium = Element.HELIUM;
@@ -13,6 +15,16 @@ public class PeriodicTable {
     public final static Element neon = Element.NEON;
 */
     public static String getElementInfo(Element element) {
+
+        System.out.println(element.getName());
+        for (Map.Entry<Integer, Integer> electronDist : element.getElectronDistribution().entrySet()) {
+            System.out.printf("%d : %d%n",
+                    electronDist.getKey(),
+                    electronDist.getValue());
+        }
+        System.out.printf("%n%n%n");
+
+
         return String.format("Element name: %s%n" +
                 "Element symbol: %s%n" +
                 "Atomic number: %s%n" +
