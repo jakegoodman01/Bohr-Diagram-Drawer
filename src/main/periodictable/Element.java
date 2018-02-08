@@ -1,6 +1,8 @@
 package main.periodictable;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public enum Element {
@@ -91,10 +93,12 @@ public enum Element {
     }
 
     public int getNumOfValenceElectrons () {
-        // TODO : Finish this method
-        int numOfElectrons = getNumOfProtons();
-        return 0;
+        List<Integer> electrons = new ArrayList<>(getElectronDistribution().values());
+        return electrons.get(electrons.size() - 1);
     }
 
-
+    public int getNumOfOrbits () {
+        List<Integer> orbits = new ArrayList<>(getElectronDistribution().keySet());
+        return orbits.get(orbits.size() - 1);
+    }
 }
