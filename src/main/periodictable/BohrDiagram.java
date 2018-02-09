@@ -29,15 +29,43 @@ public class BohrDiagram {
         int y = 40;
         int width = 100;
         for (int i = 1; i <= element.getNumOfOrbits(); i++) {
+            // This loop runs for the number of electrons on the current orbit
+            for (int j = 1; j <= element.getElectronDistribution().get(i); j++) {
+                // TODO: Draw the electrons on the corresponding orbits
+
+                switch (j) {
+                    case 1:
+                        gc.fillOval(x + width / 2 - 8, y - 4, 8, 8);
+                        break;
+                    case 2:
+                        gc.fillOval(x + width / 2 - 8, y + width - 4, 8, 8);
+                        break;
+                    case 3:
+                        gc.fillOval(x + width - 4, y + width / 2 - 8, 8, 8);
+                        break;
+                    case 4:
+                        gc.fillOval(x - 4, y + width / 2 - 8, 8, 8);
+                        break;
+                    case 5:
+                        gc.fillOval(x + width / 2 + 8, y - 4, 8, 8);
+                        break;
+                    case 6:
+                        gc.fillOval(x + width / 2 + 8, y + width - 4, 8, 8);
+                        break;
+                    case 7:
+                        gc.fillOval(x + width - 4, y + width / 2 + 8, 8, 8);
+                        break;
+                    case 8:
+                        gc.fillOval(x - 4, y + width / 2 + 8, 8, 8);
+                        break;
+                }
+
+            }
+
             gc.strokeOval(x, y, width, width);
             x -= 20;
             y -= 20;
             width += 40;
-
-            // This loop runs for the number of electrons on the current orbit
-            for (int j = 1; j <= element.getElectronDistribution().get(i); j++) {
-                // TODO: Draw the electrons on the corresponding orbits
-            }
         }
     }
 
