@@ -17,7 +17,7 @@ public class BohrDiagram {
         gc.setStroke(Color.BLACK);
         gc.setFont(new Font("Helvetica", 50));
 
-        gc.fillText("He", 120, 100);
+        gc.fillText(element.getSymbol(), 120, 100);
 
         int x = 100;
         int y = 40;
