@@ -95,7 +95,7 @@ public class Main extends Application {
 
     private void drawDiagram (GraphicsContext gc) {
         BohrDiagram diagram = new BohrDiagram(element);
-        diagram.draw(gc);
+        diagram.drawElement(gc);
     }
 
     @Override
