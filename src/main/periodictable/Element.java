@@ -23,7 +23,8 @@ public enum Element {
     PHOSPHOROUS ("P", 15, 30.9738),
     SULFUR ("S", 16, 32.065),
     CHLORINE ("Cl", 17, 35.453),
-    ARGON ("Ar", 18, 39.948);
+    ARGON ("Ar", 18, 39.948),
+    POTASSIUM ("K", 19, 39.10);
 
     private String symbol;
     private int atomicNum;
@@ -64,7 +65,6 @@ public enum Element {
     }
 
     public Map<Integer, Integer> getElectronDistribution() {
-        // TODO : Finish this method
         int numOfElectrons = getNumOfProtons();
         Map<Integer, Integer> electronDistribution = new HashMap<>();
 

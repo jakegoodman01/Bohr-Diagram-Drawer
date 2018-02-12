@@ -1,23 +1,27 @@
+package main;
+
 import javafx.application.Application;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.scene.Scene;
+import javafx.scene.canvas.Canvas;
+import javafx.scene.canvas.GraphicsContext;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
-import main.periodictable.Element;
-import main.periodictable.PeriodicTable;
+import main.periodictable.*;
+
 
 public class Main extends Application {
 
     private Text elementInfo = new Text();
+    private Element element;
 
     // Sets the text of elementInfo to the information of the element entered by the user
     private void printMessage (String input) {
         String elementName = input.toUpperCase();
-        Element element;
 
         switch (elementName) {
             case "HYDROGEN":
@@ -74,6 +78,9 @@ public class Main extends Application {
             case "ARGON":
                 element = Element.ARGON;
                 break;
+            case "POTASSIUM":
+                element = Element.POTASSIUM;
+                break;
             default:
                 element = null;
         }
@@ -89,12 +96,20 @@ public class Main extends Application {
         }
     }
 
+    private void drawDiagram (GraphicsContext gc) {
+        BohrDiagram diagram = new BohrDiagram(element);
+        diagram.drawElement(gc);
+    }
+
     @Override
     public void start(Stage stage) {
 
         // Create new TextField
         TextField elementField = new TextField();
-        elementField.setPrefColumnCount(12);
+        elementField.setPrefColumnCount(6);
+
+        // Creating the canvas
+        Canvas canvas = new Canvas(300, 250);
 
         // Create new Button
         Button displayButton = new Button("See Info");
@@ -102,12 +117,14 @@ public class Main extends Application {
             @Override
             public void handle (ActionEvent e) {
                printMessage(elementField.getText());
+                GraphicsContext gc = canvas.getGraphicsContext2D();
+                drawDiagram(gc);
            }
         });
 
         // Create the VBox
         VBox root = new VBox();
-        root.getChildren().addAll(elementField, displayButton, elementInfo);
+        root.getChildren().addAll(elementField, displayButton, elementInfo, canvas);
         root.setMinSize(350, 250);
 
         /*
@@ -124,6 +141,7 @@ public class Main extends Application {
                 "-fx-border-insets: 5;" +
                 "-fx-border-radius: 5;" +
                 "-fx-border-color: black;");
+
 
         // Create the Scene
         Scene scene = new Scene(root);
