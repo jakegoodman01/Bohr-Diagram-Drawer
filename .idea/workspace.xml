@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3505d8e4-faf5-432c-9bc1-dcdbe31b0abc" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Periodic Table/main/periodictable/Element.class" afterPath="$PROJECT_DIR$/out/production/Periodic Table/main/periodictable/Element.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -305,7 +305,14 @@
       <option name="project" value="LOCAL" />
       <updated>1518399257076</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Merging files">
+      <created>1518401643674</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1518401643674</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TodoView">
@@ -424,7 +431,8 @@
     <MESSAGE value="Changed the position of the Bohr Diagram on the screen." />
     <MESSAGE value="Finished method drawElement(), so now the Bohr-Diagram can be drawn.&#10;&#10;MVP finished!!!" />
     <MESSAGE value="Added an element" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added an element" />
+    <MESSAGE value="Merging files" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merging files" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
