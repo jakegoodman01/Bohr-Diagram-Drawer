@@ -78,6 +78,9 @@ public class Main extends Application {
             case "ARGON":
                 element = Element.ARGON;
                 break;
+            case "POTASSIUM":
+                element = Element.POTASSIUM;
+                break;
             default:
                 element = null;
         }

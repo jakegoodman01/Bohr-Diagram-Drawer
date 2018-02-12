@@ -22,17 +22,15 @@ public class BohrDiagram {
         gc.setFont(new Font("Helvetica", 50));
 
         // Draws the element symbol
-        gc.fillText(element.getSymbol(), 120, 100);
+        gc.fillText(element.getSymbol(), 120, 130);
 
         // Drawing the orbits and electrons
         int x = 100;
-        int y = 40;
+        int y = 70;
         int width = 100;
         for (int i = 1; i <= element.getNumOfOrbits(); i++) {
             // This loop runs for the number of electrons on the current orbit
             for (int j = 1; j <= element.getElectronDistribution().get(i); j++) {
-                // TODO: Draw the electrons on the corresponding orbits
-
                 switch (j) {
                     case 1:
                         gc.fillOval(x + width / 2 - 8, y - 4, 8, 8);
