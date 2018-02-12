@@ -1,2 +1,2 @@
-This program will store all important information about the periodic table.
-Maybe I will add some cool features later on.
+This program displays information about the first several element on the periodic table.
+It will also draw a Bohr Diagram of that element in the display window.
